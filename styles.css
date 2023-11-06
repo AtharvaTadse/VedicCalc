@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  #calculator {
+    margin-top: 50px;
+    display: inline-block;
+  }
+  #heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  #num1, #num2 {
+    width: 100px;
+    padding: 5px;
+  }
+  #operatorBox {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .operatorButton {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  #equalSign {
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #calculateBtn {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  #result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }

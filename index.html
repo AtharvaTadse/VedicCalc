@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vedic Calculator</title>
-    <style>
-    </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+
 </head>
 <body>
-    <div id="calculator">
-        <h1>Vedic Calculator</h1>
-        <input type="text" id="sum1" placeholder="Enter first sum">
-        <input type="text" id="sum2" placeholder="Enter second sum">
-        <br>
-        <input type="button" value="Calculate" onclick="calculateSum()">
-    </div>
+  <div id="calculator">
+    <div id="heading">Calculator</div>
+    <input type="number" id="num1" placeholder="Enter number 1">
+    <div id="operatorBox"></div>
+    <input type="number" id="num2" placeholder="Enter number 2">
+    <br><br>
+    <button class="operatorButton" onclick="insertOperator('+')">+</button>
+    <button class="operatorButton" onclick="insertOperator('-')">-</button>
+    <button class="operatorButton" onclick="insertOperator('*')"></button>
+    <button class="operatorButton" onclick="insertOperator('/')">/</button>
+    <br><br>
+    <div id="equalSign">=</div>
+    <br><br>
+    <button id="calculateBtn" onclick="calculate()">Calculate</button>
+    <div id="result"></div>
+  </div>
 
-    <script>
-        function calculateSum() {
-            var sum1 = parseFloat(document.getElementById("sum1").value);
-            var sum2 = parseFloat(document.getElementById("sum2").value);
-
-            if (!isNaN(sum1) && !isNaN(sum2)) {
-                var result = sum1 + sum2;
-                alert("Result: " + result);
-            } else {
-                alert("Please enter valid numbers in both boxes.");
-            }
-        }
-    </script>
+  
 </body>
 </html>
