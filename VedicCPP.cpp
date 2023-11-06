@@ -179,9 +179,11 @@ class Num
 		
 		cout<<endl;
 		add_val(lista);
+		LeadingZeroes();
+		return;
 		
 	}
-	void subtract(Num a, Num b)
+	void sub(Num a, Num b)
 	{
 	
 	
@@ -233,6 +235,7 @@ class Num
 			}
 		}
 		add_val(lista);
+		LeadingZeroes();
 	}
 	void mul(Num a, Num b)
 	{
@@ -308,7 +311,21 @@ class Num
 		
 		
 	}
-
+	Num operator*(Num &other)
+	{
+		
+		Num temp=*this;
+		
+		temp.mul(temp, other);
+		return temp;
+	}
+	Num operator-(Num &other)
+	{
+		Num temp=*this;
+		
+		temp.sub(temp, other);
+		return temp;
+	}
 };
 int main() {
 	
@@ -340,8 +357,10 @@ int main() {
 	cin>>s>>s2;
 	Num a(s);
 	Num b(s2);
-	a.mul(a,b);
-	a.print_val();
+	//a.mul(a,b);
+	//a.print_val();
+	Num c= a-b;
+	c.print_val();
 	/*long long int a,b;
 	cin>>a>>b;
 	cout<<a+b<<endl;*/
